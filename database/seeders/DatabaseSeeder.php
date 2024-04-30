@@ -27,12 +27,16 @@ class DatabaseSeeder extends Seeder
             'name' => 'Husein',
             'email' => 'farhanhuseinabdurrahim@gmail.com',
             'address' => 'Jl. Cempaka Putih No. 5, Kec. Cempaka Putih, Jakarta Pusat',
-            'latitude' => '-7.747033', // -6.175392
-            'longitude' => '110.355398',// 106.827153
-            'radius_km' => '0.5',// 5
+            'latitude' => '-6.175392', // -7.747033
+            'longitude' => '106.827153',// 110.355398
+            'radius_km' => '5',// 0.5
             'time_in' => '08:00',
             'time_out' => '17:00',
         ]);
 
+        $this->call([
+            AttendanceSeeder::class,
+            PermissionSeeder::class,
+        ]);
     }
 }
